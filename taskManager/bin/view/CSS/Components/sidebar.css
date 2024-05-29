@@ -1,0 +1,115 @@
+.content {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed black;
+    width: 100%;
+    height: 8rem;
+}
+
+.sidebarMenu {
+    display: flexbox;
+    width: 16rem;
+    background-color: #C7C7E5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebarMenu div {
+    padding: 0px 16px;
+}
+
+.userProfileWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfileButton {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.taskCategory {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* TODO: Change this to transparent when done */
+    background-color: transparent;
+    padding: 8px 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#activeCategory {
+    background-color: rgb(179,179,201);
+}
+
+.taskCategory:hover {
+    background-color: rgb(179,179,201);
+}
+
+a {
+    text-decoration: none;
+}
+
+.userListsWrapper {
+    max-height: 24rem;
+    padding-left: 0px;
+    overflow-y: scroll;
+    margin-bottom: 12px;
+}
+
+.userLists {
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.userLists button {
+    width: 100%;
+}
+
+/* Scrollbar properties */
+::-webkit-scrollbar {
+    width: 4px;
+}
+  
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+.newTaskWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.newTaskWrapper input {
+    border: none;
+    text-indent: 12px;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 8px 8px;
+}
+
+
+

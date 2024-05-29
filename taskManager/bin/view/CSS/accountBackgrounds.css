@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#bbb 1px, transparent 2px), radial-gradient(#bbb 1px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0, 30px 30px;
+}

@@ -1,0 +1,102 @@
+.content {
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed black;
+    width: 100%;
+    height: 8rem;
+}
+
+.sidebarMenu {
+    display: flex;
+    flex-direction: column;
+    width: 16rem;
+    background-color: #C7C7E5;
+    height: 100vh;
+}
+
+.sidebarMenu div {
+    padding: 0px 16px;
+}
+
+.userProfileWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfileButton {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.taskCategory {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* TODO: Change this to transparent when done */
+    background-color: transparent;
+    padding: 8px 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#activeCategory {
+    background-color: rgb(179,179,201);
+}
+
+.taskCategory:hover {
+    background-color: rgb(179,179,201);
+}
+
+a {
+    text-decoration: none;
+}
+
+.scrollContainer {
+    flex-grow: 1 1 auto;
+    overflow-y: auto;
+    padding-left: 0px;
+    padding-bottom: 12px;
+}
+
+.userListsWrapper {
+    padding-left: 0px;
+}
+
+.userLists {
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.userLists button {
+    width: 100%;
+}
+
+.newTaskWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.newTaskWrapper input {
+    border: none;
+    text-indent: 12px;
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 8px 8px;
+    margin-bottom: 12px;
+}
+
+
+
