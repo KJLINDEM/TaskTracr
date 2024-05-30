@@ -2,12 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 8vh;
 }
 
 .accountContainer {
-    width: 350px;
-    padding: 40px;
+    width: 30vw;
+    padding: 3vw;
     position: relative;
     background: #fff;
     border-radius: 16px;

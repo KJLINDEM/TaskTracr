@@ -56,6 +56,45 @@
                     </form> 
                 </div>
             </div>
+
+            <div class="main">
+                <header>
+                    <!-- TODO: Add a media query to add button for removing sidebar. -->
+                    <h1> Dashboard </h1>
+                </header>
+                <div class="dashboardWrapper">
+                    <div class="graphContainer" id="graph1">
+                        <canvas id="assignmentDistributionByList"> </canvas>
+                    </div>
+                    <div class="graphContainer" id="graph2">
+                        <canvas id="assignmentsDayOfWeek"> </canvas>
+                    </div>
+                    <div class="graphContainer" id="graph3">
+                        <h1> Graph 3 </h1>
+                    </div>
+                    <div class="graphContainer" id="graph4">
+                        <h1> Graph 4 </h1>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- Scripts for generating graphs -->
+        <script>
+            //Bar Graph 1: Shows distribution of assignments by List & Completed
+            const piChart = document.getElementById('assignmentDistributionByList');
+            new Chart(piChart, {
+                type: 'pie',
+                data: {
+                    labels: ['Gray', 'Red', 'Blue', 'Yellow', 'Green'],
+                    datasets: [{
+                        label: 'Assignment Distribution',
+                        data: [23, 6, 4, 18, 36],
+                        borderWidth: 1
+                    }]
+                },
+            });
+        </script>
     </body>
 </html>
