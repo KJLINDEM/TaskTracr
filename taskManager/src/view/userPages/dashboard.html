@@ -1,100 +1,70 @@
 <!DOCTYPE html>
 
-<html> 
+<html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF=8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Dashboard </title>
-        <link rel="stylesheet" href="../CSS/accountBackgrounds.css">
-        <link rel="stylesheet" href="../CSS/dashboard.css">
-        <link rel="stylesheet" href="../CSS/Components/sidebar.css">
-        <link rel="stylesheet" href="../CSS/Components/header.css">
+        <link rel="stylesheet" href="../CSS/main.css">
+        <link rel="stylesheet" href="../CSS/fonts.css">
     </head>
 
     <body>
-        <div class="content">
-            <div class="sidebarMenu">
-                <div class="userProfileWrapper">
-                    <button class="userProfileButton"> 
-                        <img width="100" height="100" id="userProfileIcon" src="../Images/Icons/profile.svg">
-                    </button>
+        <div class="contentWrapper">
+            <nav>
+                <div class="wrapper">
+                    <img id="profilePicture" src="../Images/Icons/profile.svg">
                 </div>
-                <div class="taskCategoriesWrapper">
-                    <a tabindex="-1" href="dashboard.html"> <button id="activeCategory" class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/DashbooardIcon.svg"> Dashboard </button> </a>
-                    <a tabindex="-1" href="today.html"> <button class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/TodayIcon.svg"> Today </button> </a> 
-                    <a tabindex="-1" href="planned.html"> <button class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/PlannedTaskIcon.svg"> Planned </button> </a> 
-                    <a tabindex="-1" href="allTasks.html"> <button class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/AllTaskIcon.svg"> All Tasks </button> </a> 
-                    <a tabindex="-1" href="completed.html"> <button class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/CompletedTaskIcon.svg"> Completed </button> </a> 
-                    <a tabindex="-1" href="calendar.html"> <button class="taskCategory"> <img src="../Images/Icons/taskCategorySymbols/CalendarIcon.svg"> Calendar </button> </a> 
+
+                <div class="categories" id="pages">
+                    <div class="row active" id="Dashboard">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/Dashbooard.svg">
+                        <h3> Dashboard </h3>
+                    </div>
+                    <div class="row" id="Today">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/Today.svg">
+                        <h3> Today </h3>  
+                    </div>
+                    <div class="row" id="Planned">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/PlannedTasks.svg">
+                        <h3> Planned </h3>  
+                    </div>
+                    <div class="row" id="All">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/AllTasks.svg">
+                        <h3> All </h3>  
+                    </div>
+                    <div class="row" id="Completed">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/CompletedTasks.svg">
+                        <h3> Completed </h3>  
+                    </div>
+                    <div class="row" id="Pomodoro">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/Dashbooard.svg">
+                        <h3> Pomodoro </h3>  
+                    </div>
+                    <div class="row" id="Calendar">
+                        <img class="categoryIcon" src="../Images/Icons/taskCategorySymbols/Calendar.svg">
+                        <h3> Calendar </h3>  
+                    </div>
                     <hr>
                 </div>
-                <div class="scrollContainer">
-                    <div class="userListsWrapper">
-                        <!-- For demonstrative purposes only. Repopulate with user data -->
-                        <ul class="userLists">
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 1 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 2 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 3 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 4 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 5 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 6 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 7 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 8 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 9 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 10 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 11 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 12 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 13 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 14 </button> </a>
-                            <a> <button class="taskCategory"> <img src="../Images/Icons/detailsIcon.svg"> List 15 </button> </a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="newTaskWrapper">
-                    <form> 
-                        <input id="newList" name="newList" type="text" autcomplete="off" autocapitalize="words" placeholder="+ New List">
-                    </form> 
-                </div>
-            </div>
 
-            <div class="main">
+                <div class="categories" id="folders">
+
+                </div>
+                <hr> 
+                <form id="newFolderForm" class="wrapper">
+                    <input id="newFolderInput" type="text" placeholder="+ New Folder" name="newFolder" autocomplete="off">
+                </form>
+            </nav>
+
+            <div class="mainWrapper">
                 <header>
-                    <!-- TODO: Add a media query to add button for removing sidebar. -->
+                    <button class="hamburgerMenu"> <img src="../Images/Icons/details.svg"> </button>
                     <h1> Dashboard </h1>
                 </header>
-                <div class="dashboardWrapper">
-                    <div class="graphContainer" id="graph1">
-                        <canvas id="assignmentDistributionByList"> </canvas>
-                    </div>
-                    <div class="graphContainer" id="graph2">
-                        <canvas id="assignmentsDayOfWeek"> </canvas>
-                    </div>
-                    <div class="graphContainer" id="graph3">
-                        <h1> Graph 3 </h1>
-                    </div>
-                    <div class="graphContainer" id="graph4">
-                        <h1> Graph 4 </h1>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <!-- Scripts for generating graphs -->
-        <script>
-            //Bar Graph 1: Shows distribution of assignments by List & Completed
-            const piChart = document.getElementById('assignmentDistributionByList');
-            new Chart(piChart, {
-                type: 'pie',
-                data: {
-                    labels: ['Gray', 'Red', 'Blue', 'Yellow', 'Green'],
-                    datasets: [{
-                        label: 'Assignment Distribution',
-                        data: [23, 6, 4, 18, 36],
-                        borderWidth: 1
-                    }]
-                },
-            });
-        </script>
+        <script src="../Scripts/newFolder.js"> </script>
     </body>
 </html>

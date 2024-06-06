@@ -6,8 +6,9 @@
 }
 
 .accountContainer {
-    width: 30vw;
-    padding: 3vw;
+    min-width: 30vw;
+    margin: 24px;
+    padding: 24px;
     position: relative;
     background: #fff;
     border-radius: 16px;
@@ -20,15 +21,10 @@
 }
 
 .accountContainer h1 {
-    display: inline-block;
-    margin: 0 0 20px;
-    padding: 0;
-    color: #333;
-    font-size: 32px;
 }
 
 .errorMessage, .successMessage {
-    display: none;
+    display: inline-block;
     margin: 0;
     margin-bottom: 20px;
     padding: 8px 8px;
@@ -38,7 +34,7 @@
 }
 
 .successMessage {
-    display: none;
+    display: inline-block;
     /* Using same RGB as good styling in excel */
     color: rgb(0,97,0);
     background-color: rgb(198,239,206);
@@ -71,7 +67,7 @@
 
 .toggleEyeButton {
     position: absolute;
-    right: 50px;
+    right: 10%;
     background: none;
     border: none;
     cursor: pointer;
