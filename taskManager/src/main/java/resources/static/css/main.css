@@ -1,0 +1,137 @@
+/* 
+This CSS file contains all of the main components of every navigational page. 
+This includes:
+1. Header
+2. Side navigational panel
+3. Default backgrounds
+*/
+
+.contentWrapper {
+    display: flex;
+}
+
+:root {
+    --default-background: #e5e5f7;
+    --nav-background: #c7c7e5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--default-background);
+    background-image: radial-gradient(#bbb 1px, transparent 2px), radial-gradient(#bbb 1px, transparent 2px);
+    background-size: 50px 50px;
+    background-position: 0 0, 30px 30px;
+}
+
+/* The following CSS is for the navigational side panel */
+nav {
+    background-color: var(--nav-background);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 25vw;
+    padding: 0;
+    margin: 0;
+}
+
+hr {
+    margin: 0px 16px;
+    border: solid 1px black;
+    opacity: 0.5;
+}
+
+#profilePicture {
+    min-width: 80px;
+    aspect-ratio: 1 / 1;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.row img {
+    margin-left: 12%;
+    margin-right: 15%;
+}
+
+.row:hover {
+    background-color: #b0b0d8;
+}
+
+#pages {
+    flex-shrink: 0;
+}
+
+#folders {
+    flex-grow: 1;
+    overflow-y: auto;
+    min-height: 0; /* Ensures it doesn't overflow parent */
+}
+
+#newFolderForm {
+    margin-top: auto;
+    padding: 16px;
+}
+
+#newFolderForm input {
+    border: none;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 8px;
+    width: 80%;
+}
+
+/* The following CSS properties is for the header */
+header {
+    /* Temporary background color for testing */
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hamburgerMenu {
+    background-color: transparent;
+    border: none;
+    display: none;
+}
+
+.hamburgerMenu img {
+    height: 35px;
+    display: block;
+    cursor: pointer;
+}
+
+/* Media Query for mobile devices */ 
+@media (max-width: 768px) {
+    .hamburgerMenu {
+        display: inline-block;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+.mainWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

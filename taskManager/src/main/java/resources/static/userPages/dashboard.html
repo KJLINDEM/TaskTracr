@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF=8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Dashboard </title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/fonts.css">
+    </head>
+
+    <body>
+        <div class="contentWrapper">
+            <nav>
+                <div class="wrapper">
+                    <img id="profilePicture" src="../images/profile.svg">
+                </div>
+
+                <div class="categories" id="pages">
+                    <div class="row active" id="Dashboard">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/Dashbooard.svg">
+                        <h3> Dashboard </h3>
+                    </div>
+                    <div class="row" id="Today">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/Today.svg">
+                        <h3> Today </h3>  
+                    </div>
+                    <div class="row" id="Planned">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/PlannedTasks.svg">
+                        <h3> Planned </h3>  
+                    </div>
+                    <div class="row" id="All">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/AllTasks.svg">
+                        <h3> All </h3>  
+                    </div>
+                    <div class="row" id="Completed">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/CompletedTasks.svg">
+                        <h3> Completed </h3>  
+                    </div>
+                    <div class="row" id="Pomodoro">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/Dashbooard.svg">
+                        <h3> Pomodoro </h3>  
+                    </div>
+                    <div class="row" id="Calendar">
+                        <img class="categoryIcon" src="../images/taskCategorySymbols/Calendar.svg">
+                        <h3> Calendar </h3>  
+                    </div>
+                    <hr>
+                </div>
+
+                <div class="categories" id="folders">
+
+                </div>
+                <hr> 
+                <form id="newFolderForm" class="wrapper">
+                    <input id="newFolderInput" type="text" placeholder="+ New Folder" name="newFolder" autocomplete="off">
+                </form>
+            </nav>
+
+            <div class="mainWrapper">
+                <header>
+                    <button class="hamburgerMenu"> <img src="../images/details.svg"> </button>
+                    <h1> Dashboard </h1>
+                </header>
+            </div>
+        </div>
+
+        <script src="../scripts/newFolder.js"> </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Register Now | Become More Productive Today </title>
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/fonts.css">
+        <link rel="stylesheet" href="../css/accountPages.css">
+    </head>
+
+    <body>
+        <div class="accountWrapper">
+            <div class="accountContainer">
+                <h1> Register Now: </h1>
+                <p> We just need some basic information and then you'll be all set. </p>
+                <p class="errorMessage"> Passwords do not match. Please type them in again. </p>
+                <form> 
+                    <div class="textBox">
+                        <input type="text" placeholder="First Name" name="firstName" autocomplete="given-name" required> 
+                        <input type="text" placeholder="Last Name" name="secondName" autocomplete="family-name" required  > 
+                        <input type="email" placeholder="Email" name="email" autocomplete="email"> 
+                        <div class="passwordContainer">
+                            <input id="newPassword" type="password" placeholder="Password" name="newPassword" autcomplete="account" required>
+                        </div>
+                        <div class="passwordContainer">
+                            <input id="password" type="password" placeholder="Confirm Password" name="newPasswordConfirmed" autocomplete="off" required>
+                            <button onclick="togglePasswordVisibility()" class="toggleEyeButton" type="button"> <img id="eyeIcon" alt="Password not visible" src="../images/solidEyeSlash.svg" width = "20" height="20"> </button>
+                        </div>
+                    </div>
+                    <input type="submit" class="submitButton" value="Register Now">
+                </form>
+                <p class="userAgreementText"> By creating an account, you agree to the <a class="linkRedirect">Terms & Conditions</a> and our <a class="linkRedirect">Privacy Policy.</a></p>
+                <p class="registerText"> <strong>Already have an account?</strong> <a href="login.html" class="linkRedirect">Log in now</a></p>
+            </div>
+        </div>
+        <script src="../scripts/passwordVisibility.js"> </script>
+    </body>
+</html>

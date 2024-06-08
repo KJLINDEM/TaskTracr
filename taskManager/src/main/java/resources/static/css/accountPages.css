@@ -1,0 +1,120 @@
+.accountWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+}
+
+.accountContainer {
+    min-width: 30vw;
+    margin: 24px;
+    padding: 24px;
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.accountContainer:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4)
+}
+
+.accountContainer h1 {
+}
+
+.errorMessage, .successMessage {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 8px 8px;
+    /* Using same RGB as from bad styling in excel */
+    color: rgb(156,0,6);
+    background-color: rgb(255,199,206);
+}
+
+.successMessage {
+    display: inline-block;
+    /* Using same RGB as good styling in excel */
+    color: rgb(0,97,0);
+    background-color: rgb(198,239,206);
+    margin-bottom: 8px;
+}
+
+.textBox input {
+    position: relative;
+    width: 100%;
+    padding: 12px 0px;
+    text-indent: 12px;
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    border-radius: 16px;
+    transition: background 0.3s ease;
+    margin-bottom: 32px;
+}
+
+.textBox input:focus {
+    background: #e0e0e0;
+}
+
+.passwordContainer {
+    display: flex;
+    align-items: center;
+}
+
+.toggleEyeButton {
+    position: absolute;
+    right: 10%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+#forgotPassword {
+    margin-left: 8px;
+    margin-top: -16px;
+    margin-bottom: 32px;
+}
+
+.submitButton {
+    width: 100%;
+    background: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.submitButton:hover {
+    background: #555;
+}
+
+hr {
+    margin: 25px 0px;
+}
+
+.userAgreementText {
+    font-size: 12px;
+}
+
+.linkRedirect {
+    text-decoration: none;
+    color: lightblue;
+    transition: all ease-in 0.15s;
+    cursor: pointer;
+}
+
+.linkRedirect:hover {
+    text-decoration: underline;
+}
+
+
+
+

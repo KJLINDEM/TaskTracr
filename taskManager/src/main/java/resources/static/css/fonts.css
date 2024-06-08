@@ -1,0 +1,51 @@
+:root {
+    --font-family-primary: 'Quicksand', sans-serif;
+    --font-size-base: 1rem;
+    --font-size-h1: 3rem;
+    --font-size-h2: 1.5rem;
+    --font-size-h3: 1.25rem;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 900;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('QUICKSAND-VARIABLEFONT_WGHT.TTF') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+* {
+    font-family: var(--font-family-primary);
+}
+
+h1 {
+    font-weight: var(--fw-semibold);
+    font-size: var(--font-size-h1);
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-weight: var(--fw-semibold);
+    font-size: var(--font-size-h2);
+    margin: 0;
+}
+
+h3 {
+    font-weight: var(--fw-medium);
+    font-size: var(--font-size-h3);
+    margin: 12px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h4, h5, h6, p {
+    font-weight: var(--fw-regular);
+    font-size: var(--font-size-base);
+}
