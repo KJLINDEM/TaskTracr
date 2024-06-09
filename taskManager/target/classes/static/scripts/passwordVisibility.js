@@ -10,4 +10,4 @@ function togglePasswordVisibility() {
         eyeIcon.src = "../images/solidEyeSlash.svg";
         eyeIcon.alt = "Password not visible";
     }
-}
+} 
