@@ -1,3 +1,30 @@
+:root {
+    --error-bg-color: rgb(255,199,206);
+    --error-text-color: rgb(156,0,6);
+    --success-bg-color: rgb(198,239,206);
+    --success-text-color: rgb(0,97,0);
+    --default-shadow: rgba(0,0,0,0.2);
+    --default-shadow-hover: rgba(0,0,0,0.4);
+    --default-card-bg: #fff;
+    --default-input-bg: #f0f0f0;
+    --default-input-bg-focus: #e0e0e0;
+    --default-input-text-color: #333;
+    --default-link-color: #8aadb8;
+    --main-lg-size: 32px;
+    --main-m-size: 24px;
+    --main-s-size: 16px;
+    --main-xs-size: 8px;
+}
+
+input, .submitButton {
+    font-size: 1rem;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: var(--main-s-size);
+}
+
 .accountWrapper {
     display: flex;
     justify-content: center;
@@ -7,38 +34,34 @@
 
 .accountContainer {
     min-width: 30vw;
-    margin: 24px;
-    padding: 24px;
+    margin: var(--main-m-size);
+    padding: var(--main-m-size);
     position: relative;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    background: var(--default-card-bg);
+    border-radius: var(--main-s-size);
+    box-shadow: 0 0 20px var(--default-shadow);
     transition: all 0.2s ease-in-out;
 }
 
 .accountContainer:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.4)
-}
-
-.accountContainer h1 {
+    box-shadow: 0 0 20px var(--default-shadow-hover);
 }
 
 .errorMessage, .successMessage {
     display: inline-block;
     margin: 0;
-    margin-bottom: 20px;
-    padding: 8px 8px;
-    /* Using same RGB as from bad styling in excel */
-    color: rgb(156,0,6);
-    background-color: rgb(255,199,206);
+    margin-bottom: var(--main-s-size);
+    padding: var(--main-xs-size);
+}
+
+.errorMessage {
+    color: var(--error-text-color);
+    background-color: var(--error-bg-color);
 }
 
 .successMessage {
-    display: inline-block;
-    /* Using same RGB as good styling in excel */
-    color: rgb(0,97,0);
-    background-color: rgb(198,239,206);
-    margin-bottom: 8px;
+    color: var(--success-text-color);
+    background-color: var(--success-bg-color);
 }
 
 .textBox input {
@@ -46,18 +69,17 @@
     width: 100%;
     padding: 12px 0px;
     text-indent: 12px;
-    background: #f0f0f0;
+    background: var(--default-input-bg);
     border: none;
     outline: none;
-    font-size: 16px;
-    color: #333;
-    border-radius: 16px;
+    color: var(--default-input-text-color);
+    border-radius: var(--main-s-size);
     transition: background 0.3s ease;
-    margin-bottom: 32px;
+    margin-bottom: var(--main-m-size);
 }
 
 .textBox input:focus {
-    background: #e0e0e0;
+    background: var(--default-input-bg-focus);
 }
 
 .passwordContainer {
@@ -71,7 +93,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    margin-bottom: 32px;
+    margin-bottom: var(--main-lg-size);
 }
 
 #forgotPassword {
@@ -82,13 +104,13 @@
 
 .submitButton {
     width: 100%;
-    background: #333;
+    margin-bottom: var(--main-m-size);
+    background: var(--default-input-text-color);
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px;
-    color: white;
-    border-radius: 8px;
+    color: var(--default-card-bg);
+    border-radius: var(--main-s-size);
     transition: background 0.3s ease;
 }
 
@@ -97,16 +119,16 @@
 }
 
 hr {
-    margin: 25px 0px;
+    margin: var(--main-m-size) 0px;
 }
 
 .userAgreementText {
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .linkRedirect {
     text-decoration: none;
-    color: lightblue;
+    color: var(--default-link-color);
     transition: all ease-in 0.15s;
     cursor: pointer;
 }

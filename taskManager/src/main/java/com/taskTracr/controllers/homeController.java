@@ -7,7 +7,7 @@ public class homeController {
 
     //DISCUSS: Mappings are to the resources/static directory for Spring Boot
     //TODO: Is it okay that I include the .html file extension since there is no application.properties to change this? 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String index() {
         return "accountPages/home.html";
     }

@@ -1,7 +1,14 @@
 package com.taskTracr.models;
+import java.io.Serializable;
 import java.sql.Timestamp;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-public class user {
+
+
+public class user implements Serializable {
 
     /*
      * Things associated with a user:
@@ -29,7 +36,7 @@ public class user {
     private boolean sounds, isVerified, isActive;
     private Timestamp lastLoggedIn, updatedAt;
     private Timestamp createdAt;
-    private short userID;
+    private int userID;
 
     public String getFirstName() {
         return firstName;
@@ -168,11 +175,11 @@ public class user {
         this.updatedAt = updatedAt;
     }
 
-    public final short getUserID() {
+    public final int getUserID() {
         return userID;
     }
 
-    public void setUserID(short userID) {
+    public void setUserID(int userID) {
         this.userID = userID;
     }
 

@@ -17,18 +17,18 @@
                 <p class="errorMessage"> Incorrect username and password combination. Please try again. </p>
                 <form>
                     <div class="textBox">
-                        <input id="username" type="text" placeholder="Username" name="username" required>
+                        <input id="username" type="text" placeholder="Email" name="username" autocomplete="email" required>
                         <div class="passwordContainer">
                             <input id="password" type="password" placeholder="Password" name="password" required>
                             <button onclick="togglePasswordVisibility()" class="toggleEyeButton" type="button"> <img id="eyeIcon" alt="Password not visible" src="../images/solidEyeSlash.svg" width = "20" height="20"> </button>
                         </div>
-                        <p id="forgotPassword"> <a href="resetPassword.html" target="_blank" class="linkRedirect">Forgot your password?</a> </p>
+                        <p id="forgotPassword"> <a href="reset-password" target="_blank" class="linkRedirect">Forgot your password?</a> </p>
                     </div>
-                    <a href="../userPages/dashboard.html"> <button style="margin-bottom: 16px;" type="button" class="submitButton"> Temporary Sign In </button> </a>
+                    <a href="../userPages/dashboard"> <button style="margin-bottom: 16px;" type="button" class="submitButton"> Temporary Sign In </button> </a>
                     <input type="submit" class="submitButton" value="Sign In">
                 </form>
                 <p class="userAgreementText"> By continuing, you agree to the <a class="linkRedirect">Terms & Conditions</a> and our <a class="linkRedirect">Privacy Policy.</a></p>
-                <p class="registerText"> <strong tabindex="0">Don't have an account?</strong> <a href="register.html" class="linkRedirect">Create one now</a></p>
+                <p class="registerText"> <strong tabindex="0">Don't have an account?</strong> <a href="register" class="linkRedirect">Create one now</a></p>
             </div>
         </div>
         <script src="../scripts/passwordVisibility.js"> </script>

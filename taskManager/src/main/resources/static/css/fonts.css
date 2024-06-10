@@ -26,7 +26,7 @@
 h1 {
     font-weight: var(--fw-semibold);
     font-size: var(--font-size-h1);
-    margin: 0;
+    margin: 16px 0px;
     letter-spacing: 1px;
 }
 
