@@ -48,7 +48,7 @@ p {
 }
 
 .errorMessage, .successMessage {
-    display: inline-block;
+    display: none;
     margin: 0;
     margin-bottom: var(--main-s-size);
     padding: var(--main-xs-size);
@@ -89,11 +89,11 @@ p {
 
 .toggleEyeButton {
     position: absolute;
-    right: 10%;
+    right: 8%;
     background: none;
     border: none;
     cursor: pointer;
-    margin-bottom: var(--main-lg-size);
+    margin-bottom: 20px;
 }
 
 #forgotPassword {

@@ -19,13 +19,13 @@
                 <form action="/register" method="POST"> 
                     <div class="textBox">
                         <input type="text" placeholder="First Name" name="firstName" autocomplete="given-name" required> 
-                        <input type="text" placeholder="Last Name" name="secondName" autocomplete="family-name" required  > 
+                        <input type="text" placeholder="Last Name" name="lastName" autocomplete="family-name" required  > 
                         <input type="email" placeholder="Email" name="email" autocomplete="email"> 
                         <div class="passwordContainer">
-                            <input id="newPassword" type="password" placeholder="Password" name="newPassword" autcomplete="account" required>
+                            <input id="newPassword" type="password" placeholder="Password" name="password" autcomplete="account" required>
                         </div>
                         <div class="passwordContainer">
-                            <input id="password" type="password" placeholder="Confirm Password" name="newPasswordConfirmed" autocomplete="off" required>
+                            <input id="password" type="password" placeholder="Confirm Password" name="passwordConfirmed" autocomplete="off" required>
                             <button onclick="togglePasswordVisibility()" class="toggleEyeButton" type="button"> <img id="eyeIcon" alt="Password not visible" src="../images/solidEyeSlash.svg" width = "20" height="20"> </button>
                         </div>
                     </div>
