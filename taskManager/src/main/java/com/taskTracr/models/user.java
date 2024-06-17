@@ -1,10 +1,6 @@
 package com.taskTracr.models;
 import java.io.Serializable;
-import java.sql.Timestamp;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 
 
@@ -34,8 +30,8 @@ public class user implements Serializable {
     private String firstName, lastName, email, salt, userHash, role, profilePictureURL;
     private byte theme, notifications;
     private boolean sounds, isVerified, isActive;
-    private Timestamp lastLoggedIn, updatedAt;
-    private Timestamp createdAt;
+    private LocalDateTime lastLoggedIn, updatedAt;
+    private LocalDateTime createdAt;
     private int userID;
 
     public String getFirstName() {
@@ -151,27 +147,27 @@ public class user implements Serializable {
         this.isActive = isActive;
     }
 
-    public final Timestamp getCreatedAt() {
+    public final LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 
-    public Timestamp getLastLoggedIn() {
+    public LocalDateTime getLastLoggedIn() {
         return lastLoggedIn;
     }
 
-    public void setLastLoggedIn(Timestamp lastLoggedIn) {
+    public void setLastLoggedIn(LocalDateTime lastLoggedIn) {
         this.lastLoggedIn = lastLoggedIn;
     }
 
-    public Timestamp getUpdatedAt() {
+    public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Timestamp updatedAt) {
+    public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
 

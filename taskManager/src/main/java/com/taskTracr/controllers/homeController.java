@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,20 +50,49 @@ public class homeController {
              * 2. Check that email is not already in 'DB'
              * 3. Passwords must match
              * 4. */
-            
+            String message;
+            if(!validateEmail(email)) {
+                message = "Email is incorrect format. Please try again";
+                return "redirect:/register";
+            }
+
+            //TODO: Optimize this using a two pointer approach. 
+            for(user user : userRepo) {
+                if(user.getEmail().equals(email)) {
+                    message = "Email already exists. Please log in instead";
+                    return "redirect:/register";
+                }
+            }
+
+            if(!password.equals(passwordConfirmed)) {
+                message = "Passwords are incorrect. Please try again";
+                return "redirect:/register";
+            }
             
             newUser.setFirstName(firstName);
             newUser.setLastName(lastName);
             newUser.setEmail(email);
             newUser.setUserHash(passwordConfirmed);
-
+            message = "Account successfully created. Now try logging in :-)!";
             return "redirect:/login";
         }
 
-    private boolean emailValidation(final String email) {
+    private boolean validateEmail(final String email) {
+        //RegEx based on RFC5322
         final String EMAIL_PATTERN = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
         final Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
+    }
+    
+    @SuppressWarnings("unused") @Deprecated
+    private String validateRegistration
+        (
+            List<user> userRepo, 
+            String email, 
+            String password, 
+            String passwordConfirmed
+        ) {
+        return null;
     }
 }
