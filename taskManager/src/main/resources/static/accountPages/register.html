@@ -14,7 +14,8 @@
         <div class="accountWrapper">
             <div class="accountContainer">
                 <h1> Register Now: </h1>
-                <p class="errorMessage"> Passwords do not match. Please type them in again. </p>
+                <div id="errorMessage" class="errorMessage"> </div>
+                <div id="successMessage" class="successMessage"> </div>
                 <p> We just need some basic information and then you'll be all set. </p>
                 <form action="/register" method="POST"> 
                     <div class="textBox">
@@ -36,5 +37,25 @@
             </div>
         </div>
         <script src="../scripts/passwordVisibility.js"> </script>
+        <script>
+            window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const errorMessage = urlParams.get('errorMessage');
+            const successMessage = urlParams.get('successMessage');
+            const displayStyle = urlParams.get('displayStyle');
+
+            if (errorMessage) {
+                const errorDiv = document.getElementById('errorMessage');
+                errorDiv.textContent = errorMessage;
+                errorDiv.style.display = displayStyle;
+            }
+
+            if (successMessage) {
+                const successDiv = document.getElementById('successMessage');
+                successDiv.textContent = successMessage;
+                successDiv.style.display = displayStyle;
+            }
+        };
+        </script>
     </body>
 </html>

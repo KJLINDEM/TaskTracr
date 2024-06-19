@@ -31,7 +31,7 @@ public class user implements Serializable {
     private byte theme, notifications;
     private boolean sounds, isVerified, isActive;
     private LocalDateTime lastLoggedIn, updatedAt;
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = null;
     private int userID;
 
     public String getFirstName() {
@@ -151,8 +151,9 @@ public class user implements Serializable {
         return createdAt;
     }
 
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    //This one is special because it will be createdAt the user system time always. Should be non-mutable
+    public void setCreatedAt() {
+        createdAt = LocalDateTime.now();
     }
 
     public LocalDateTime getLastLoggedIn() {
