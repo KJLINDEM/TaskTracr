@@ -1,5 +1,6 @@
 package com.taskTracr.controllers;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.taskTracr.models.*;
+import java.security.SecureRandom;
+import java.util.Random;
 
 @Controller
 public class accountController {
@@ -87,5 +90,13 @@ public class accountController {
         validate.setRedirect("redirect:/register?successMessage=" + validate.getMessage() + "&displayStyle=inline-block");
         validate.setRedirect("redirect:/login");
         return validate;
+    }
+
+    //Method to create a pseudorandom 16 byte salt which equates to 24 characters using java.util.SecureRandom;
+    private String createSalt() {
+        Random random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        return Base64.getEncoder().encodeToString(salt);
     }
 }
